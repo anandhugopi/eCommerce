@@ -1,0 +1,143 @@
+2018-04-27 11:33:13 [::1][-][se268m5a50hfb630od47a0hv63][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /data/projects/eCommerce/vendor/yiisoft/yii2/db/Connection.php:687
+Stack trace:
+#0 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Connection.php(687): PDO->__construct('mysql:host=loca...', 'root', '', NULL)
+#1 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Connection.php(613): yii\db\Connection->createPdoInstance()
+#2 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#3 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#4 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#5 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare('<span class="ke...')
+#6 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 /data/projects/eCommerce/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#8 /data/projects/eCommerce/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#10 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('<span class="st...', '<span class="st...', '<span class="ke...')
+#11 /data/projects/eCommerce/vendor/yiisoft/yii2/db/ActiveRecord.php(384): yii\db\Schema->getTableSchema('<span class="st...')
+#12 /data/projects/eCommerce/vendor/yiisoft/yii2/db/ActiveRecord.php(211): yii\db\ActiveRecord::getTableSchema()
+#13 /data/projects/eCommerce/vendor/yiisoft/yii2/db/ActiveRecord.php(190): yii\db\ActiveRecord::filterCondition('[<span class="s...')
+#14 /data/projects/eCommerce/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition('[<span class="s...')
+#15 /data/projects/eCommerce/common/models/User.php(83): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#16 /data/projects/eCommerce/common/models/LoginForm.php(73): common\models\User::findByUsername('<span class="st...')
+#17 /data/projects/eCommerce/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#18 [internal function]: common\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...', Object(yii\validators\InlineValidator))
+#19 /data/projects/eCommerce/vendor/yiisoft/yii2/validators/InlineValidator.php(72): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...', Object(yii\validators\InlineValidator))
+#20 /data/projects/eCommerce/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), '<span class="st...')
+#21 /data/projects/eCommerce/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), '[<span class="s...')
+#22 /data/projects/eCommerce/common/models/LoginForm.php(58): yii\base\Model->validate()
+#23 /data/projects/eCommerce/frontend/controllers/SiteController.php(90): common\models\LoginForm->login()
+#24 [internal function]: frontend\controllers\SiteController->actionLogin()
+#25 /data/projects/eCommerce/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#26 /data/projects/eCommerce/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[<span class="s...')
+#27 /data/projects/eCommerce/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#28 /data/projects/eCommerce/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#29 /data/projects/eCommerce/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#30 /data/projects/eCommerce/frontend/web/index.php(17): yii\base\Application->run()
+#31 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /data/projects/eCommerce/vendor/yiisoft/yii2/db/Connection.php:624
+Stack trace:
+#0 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Connection.php(996): yii\db\Connection->open()
+#1 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Connection.php(983): yii\db\Connection->getMasterPdo()
+#2 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Command.php(253): yii\db\Connection->getSlavePdo()
+#3 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Command.php(1143): yii\db\Command->prepare('<span class="ke...')
+#4 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 /data/projects/eCommerce/vendor/yiisoft/yii2/db/mysql/Schema.php(312): yii\db\Command->queryAll()
+#6 /data/projects/eCommerce/vendor/yiisoft/yii2/db/mysql/Schema.php(125): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Schema.php(744): yii\db\mysql\Schema->loadTableSchema('<span class="st...')
+#8 /data/projects/eCommerce/vendor/yiisoft/yii2/db/Schema.php(194): yii\db\Schema->getTableMetadata('<span class="st...', '<span class="st...', '<span class="ke...')
+#9 /data/projects/eCommerce/vendor/yiisoft/yii2/db/ActiveRecord.php(384): yii\db\Schema->getTableSchema('<span class="st...')
+#10 /data/projects/eCommerce/vendor/yiisoft/yii2/db/ActiveRecord.php(211): yii\db\ActiveRecord::getTableSchema()
+#11 /data/projects/eCommerce/vendor/yiisoft/yii2/db/ActiveRecord.php(190): yii\db\ActiveRecord::filterCondition('[<span class="s...')
+#12 /data/projects/eCommerce/vendor/yiisoft/yii2/db/BaseActiveRecord.php(112): yii\db\ActiveRecord::findByCondition('[<span class="s...')
+#13 /data/projects/eCommerce/common/models/User.php(83): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#14 /data/projects/eCommerce/common/models/LoginForm.php(73): common\models\User::findByUsername('<span class="st...')
+#15 /data/projects/eCommerce/common/models/LoginForm.php(44): common\models\LoginForm->getUser()
+#16 [internal function]: common\models\LoginForm->validatePassword('<span class="st...', '<span class="ke...', Object(yii\validators\InlineValidator))
+#17 /data/projects/eCommerce/vendor/yiisoft/yii2/validators/InlineValidator.php(72): call_user_func('[<span class="t...', '<span class="st...', '<span class="ke...', Object(yii\validators\InlineValidator))
+#18 /data/projects/eCommerce/vendor/yiisoft/yii2/validators/Validator.php(267): yii\validators\InlineValidator->validateAttribute(Object(common\models\LoginForm), '<span class="st...')
+#19 /data/projects/eCommerce/vendor/yiisoft/yii2/base/Model.php(367): yii\validators\Validator->validateAttributes(Object(common\models\LoginForm), '[<span class="s...')
+#20 /data/projects/eCommerce/common/models/LoginForm.php(58): yii\base\Model->validate()
+#21 /data/projects/eCommerce/frontend/controllers/SiteController.php(90): common\models\LoginForm->login()
+#22 [internal function]: frontend\controllers\SiteController->actionLogin()
+#23 /data/projects/eCommerce/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array('[<span class="t...', '[]')
+#24 /data/projects/eCommerce/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams('[<span class="s...')
+#25 /data/projects/eCommerce/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('<span class="st...', '[<span class="s...')
+#26 /data/projects/eCommerce/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('<span class="st...', '[<span class="s...')
+#27 /data/projects/eCommerce/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#28 /data/projects/eCommerce/frontend/web/index.php(17): yii\base\Application->run()
+#29 {main}
+Additional Information:
+
+2018-04-27 11:33:13 [::1][-][se268m5a50hfb630od47a0hv63][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'B1spdxue54xh4-3IRB6DsM-aqfFPUgaDYC1E5a08JjxUbmZAfM6E-Suxq6koLbrZvPWdswJjReYVZyWi5HJFUw=='
+    'LoginForm' => [
+        'username' => 'demo'
+        'password' => 'demo'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'Drupal_toolbar_collapsed' => '0'
+    'pma_lang' => 'en'
+    'bcb28fcdce30baec9f14c679bb2214d1' => 'f6a1edab8e48f493f40a35798aa1c651af202250a:4:{i:0;s:1:\"1\";i:1;s:13:\"cj@rensup.com\";i:2;i:2592000;i:3;a:5:{s:5:\"email\";s:13:\"cj@rensup.com\";s:6:\"userId\";s:1:\"1\";s:4:\"role\";s:15:\"ADMIN          \";s:6:\"vendID\";N;s:7:\"invMode\";s:4:\"live\";}}'
+    'SESS8b1fdc44bdaf9d6b7bdfa8b474864cbc' => 'b_DnNZXynAmVu96o4GrJx8Nd3X-K5xWsfWK4CVKhYEc'
+    'cookies_enabled' => '1'
+    'phpMyAdmin' => '146691866eef258b2a632488afd7cbaa'
+    'advanced-frontend' => 'se268m5a50hfb630od47a0hv63'
+    '_csrf-frontend' => 'f08b452cda76a6cb414156a0cc77355061b92d369c1119b75ebbc65794367b57a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"S5O7gPcuJRFal39iso4BM1CeuJaGINco\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'wiwotmp'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'BASE' => '/'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '235'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.117 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_DNT' => '1'
+    'HTTP_REFERER' => 'http://localhost/eCommerce/frontend/web/?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'Drupal.toolbar.collapsed=0; pma_lang=en; bcb28fcdce30baec9f14c679bb2214d1=f6a1edab8e48f493f40a35798aa1c651af202250a%3A4%3A%7Bi%3A0%3Bs%3A1%3A%221%22%3Bi%3A1%3Bs%3A13%3A%22cj%40rensup.com%22%3Bi%3A2%3Bi%3A2592000%3Bi%3A3%3Ba%3A5%3A%7Bs%3A5%3A%22email%22%3Bs%3A13%3A%22cj%40rensup.com%22%3Bs%3A6%3A%22userId%22%3Bs%3A1%3A%221%22%3Bs%3A4%3A%22role%22%3Bs%3A15%3A%22ADMIN++++++++++%22%3Bs%3A6%3A%22vendID%22%3BN%3Bs%3A7%3A%22invMode%22%3Bs%3A4%3A%22live%22%3B%7D%7D; SESS8b1fdc44bdaf9d6b7bdfa8b474864cbc=b_DnNZXynAmVu96o4GrJx8Nd3X-K5xWsfWK4CVKhYEc; cookies_enabled=1; phpMyAdmin=146691866eef258b2a632488afd7cbaa; advanced-frontend=se268m5a50hfb630od47a0hv63; _csrf-frontend=f08b452cda76a6cb414156a0cc77355061b92d369c1119b75ebbc65794367b57a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22S5O7gPcuJRFal39iso4BM1CeuJaGINco%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/data/projects'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/data/projects'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/data/projects/eCommerce/frontend/web/index.php'
+    'REMOTE_PORT' => '39640'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/eCommerce/frontend/web/?r=site%2Flogin'
+    'SCRIPT_NAME' => '/eCommerce/frontend/web/index.php'
+    'PHP_SELF' => '/eCommerce/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1524828793.323
+    'REQUEST_TIME' => 1524828793
+]
